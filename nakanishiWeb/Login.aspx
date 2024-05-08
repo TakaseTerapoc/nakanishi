@@ -11,6 +11,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <script type="text/javascript">
+        <%-- takase0508--%>
         <%-- takase0507--%>
         <%--function CustomLogin(isLangChange) {
             const select = document.querySelector("#selector");
