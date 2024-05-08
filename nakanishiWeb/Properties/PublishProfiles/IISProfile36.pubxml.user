@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+このファイルは、Web プロジェクトの公開 / パッケージ処理で使用されます。この MSBuild ファイルを編集すると、
+この処理の動作をカスタマイズできます。詳細については、https://go.microsoft.com/fwlink/?LinkID=208121 を参照してください。 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <History>True|2023-04-19T05:36:53.2296314Z;True|2023-04-18T17:32:14.8495165+09:00;True|2023-04-18T16:44:46.0339755+09:00;True|2023-04-18T15:57:15.9512820+09:00;</History>
+  </PropertyGroup>
+</Project>

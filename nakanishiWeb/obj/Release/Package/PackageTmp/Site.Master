@@ -1,0 +1,97 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="nakanishiWeb.Site" %>
+<%@ Import Namespace="nakanishiWeb.Const" %>
+
+<!DOCTYPE html>
+<html lang="<%=langCode %>">
+<head runat="server">
+    <link rel="stylesheet" href="~/css/reset.css" />
+    <link rel="stylesheet" href="~/css/layout.css" />
+    <link rel="stylesheet" href="~/css/main.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title id="pageTitle"><%: Page.Title %></title>
+</head>
+<body class="grid">
+<!--*** サイドメニュー ***-->
+        <nav id="sideMenu" class="menu grid relative">
+            <div id="sideMenuController" class="absolute hoverP" onclick="sideNavOpenClose('sideMenu',this)">
+                <div id="icon"></div>
+            </div>
+            <header id="header" class="grid header sideNavWidth">
+                <div></div>
+                <div class="headDate grid sideNavWidth">
+                    <div>
+                        <img src="images/NAKANISHI_logo_notag.png" />
+                    </div>
+                    <div class="headUserName grid">
+                        <div class="grid userInfo">
+                            <p class="mainColor userInfo"><%=companyName %>・<%=affiliation %></p>
+                            <button type="button" id="toMain" class="bold mainColor hoverD"><%=userName %>　<%=CommonWords[(int)LanguageTable.CommonPageStrId.Common_70] %></button>
+                            <p id="headTooltip" class="tooltip hide"><%=CommonWords[(int)LanguageTable.CommonPageStrId.Common_68] %></p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="menu">
+                <div class="grid-item"><p class="white bold menuParent" onclick="pageChange('main')"><%=CommonWords[(int)LanguageTable.CommonPageStrId.Common_48] %></p>
+                </div>
+                <%if (isEnduser){ %>
+                <div></div>
+                <%}else{ %>
+                <div class="grid-item"><p class="white bold menuParent" onclick="pageChange('endUser')"><%=CommonWords[(int)LanguageTable.CommonPageStrId.Common_4] %></p>
+                </div>
+                <%} %>
+                <div class="grid-item side-open"><p class="white bold menuParent"><%=CommonWords[(int)LanguageTable.CommonPageStrId.Common_49] %></p>
+                    <div id="secondInCont" class="grid inner-grid-container">
+                        <p class="inner_grid_item grid white bold" onclick="pageChange(0)"><%=CommonWords[(int)LanguageTable.CommonPageStrId.Common_6] %></p>
+                        <p class="inner_grid_item grid white bold" onclick="pageChange(1)"><%=CommonWords[(int)LanguageTable.CommonPageStrId.Common_7] %></p>
+                    </div>
+                </div>
+
+                <div class="grid-item"><p class="white bold menuParent" onclick="pageChange('userEdit')"><%=CommonWords[(int)LanguageTable.CommonPageStrId.Common_64] %></p>
+                </div>
+            </div>
+        </nav>
+<!--*** サイドメニューここまで ***-->
+        <%if(isBranch){ %>
+        <div class="contentBox grid BRA"/>
+        <%}else if(isClient){ %>
+        <div class="contentBox grid CLT"/>
+        <%}else if(isEnduser){ %>
+        <div class="contentBox grid ENU"/>
+        <%}else{%>
+        <div class="contentBox grid">
+        <%}%>
+            <header id="header_top" class="grid"> <p class="inline bold white">NAKANISHI IoT SYSTEM</p>
+                <div id="headLogoutBox" class="putRight inline">
+                <button id="logout" type="button" onclick="let ok=confirm('<%=CommonWords[(int)LanguageTable.CommonPageStrId.Common_69] %>');if(ok) location.href='Logout.aspx'; return false;"><%=CommonWords[(int)LanguageTable.CommonPageStrId.Common_2] %></button>
+                </div>
+            </header>
+
+<!--*** ログイン画面除く全画面共通 ***-->
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+<!--*** タイトルと主要な内容 == 各ページに記載 ***-->
+            </asp:ContentPlaceHolder>
+
+<!--*** フッター ***-->
+            <footer class="grid">
+                    &copy; <%: DateTime.Now.Year %> - NAKANISHI MFG. CO., LTDd -
+            </footer>
+<!--*** フッターここまで ***-->
+
+        </div><!--.contentBox-->
+
+        <script src="js/Layout.js"></script>
+        <script type="text/javascript">
+            /*
+            *siteMasterの「製品一覧」をクリックした時に使用される
+             **/
+            function pageChange(value) {
+                const hideInput = document.querySelector("#pageChange");
+                const bt = document.querySelector("#pageChangeBT");
+                hideInput.value = value;
+                bt.click();
+            }
+        </script>
+    </body>
+</html>

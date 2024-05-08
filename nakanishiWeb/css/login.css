@@ -1,0 +1,70 @@
+﻿#loginForm {
+    margin-top: 60px;
+}
+
+#loginForm label{
+    font-size: var(--defaultFontSize);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    font-weight: 700;
+    outline: 0;
+    border-bottom: 2px solid var(--pointColor);
+}
+
+button:focus {
+    outline: 0;
+    border: 2px solid var(--reversalFontColor);
+}
+p#headDate{
+    margin-bottom: 20px;
+}
+.loginForm{
+    border-bottom: 1px solid var(--mainFontColor);
+    width: 300px;
+}
+.formGroup {
+    margin: 20px auto;
+}
+
+.formGroup button {
+    margin-top: 50px;
+    width: 160px;
+    height: 60px;
+    background-color: var(--attentionColor1);
+    color: var(--reversalFontColor);
+    border: none;
+    border-radius: 10px;
+}
+
+.formGroup button:hover {
+    background-color: var(--lightMainColor);
+    border: 3px solid var(--pointColor);
+    color: var(--pointColor);
+}
+
+.formGroup select{
+    width: 80px;
+    height: 40px;
+    border: none;
+}
+.formGroup select:focus{
+    outline: 0;
+    border-bottom: 2px solid var(--pointColor);
+    font-weight: 700;
+}
+
+div.main h2{
+    font-size: 23px;
+    margin-bottom: 90px;
+}
+
+div.main {
+    text-align: center;
+    margin-top: 170px;
+}
+
+.rightNavContent{
+    grid-template-rows: 80px 660px 28px;
+}

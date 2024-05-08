@@ -1,0 +1,59 @@
+﻿[id^="timeline"] {
+    position: relative;
+    top: 25px;
+    left: -36px;
+    width: 700px;
+    height: 110px;
+}
+    [id^="timeline"] svg {
+        position: absolute;
+        top: 0px;
+        left: 0;
+    }
+
+    [id^="timeline"] .axis path,
+    [id^="timeline"] .axis line {
+        fill: none;
+        stroke: black;
+        shape-rendering: crispEdges;
+    }
+
+    [id^="timeline"] .axis .tick line {
+        fill: none;
+        stroke: #ccc;
+    }
+
+    [id^="timeline"] .axis text {
+        font-family: sans-serif;
+        font-size: 9px;
+    }
+
+    [id^="timeline"] .y-axis-label {
+        font-family: sans-serif;
+        font-size: 11px;
+        word-wrap: break-word;
+        text-align: center;
+    }
+
+    [id^="timeline"] .rect-label {
+        font-family: sans-serif;
+        font-size: 11px;
+    }
+
+    [id^="timeline"] .y-axis path {
+        stroke: none;
+    }
+div.inactive div#timeline{
+    top: 73px;
+}
+
+.TimeChartTitle {
+    position: relative;
+    top: 20px;
+    left: 50px;
+}
+
+.AlertListTitle {
+    position: relative;
+    top: -10px;
+}

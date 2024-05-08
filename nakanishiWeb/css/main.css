@@ -1,0 +1,705 @@
+/*Detail.html用のCSS*/
+div.ui-helper-hidden-accessible{
+    display: none;
+}
+ul.ui-menu{
+    background-color: var(--reversalFontColor);
+    z-index: 10;
+    color: var(--mainFontColor);
+    padding: 5px;
+}
+ul.ui-menu li div.ui-state-active {
+    background-color: #afced2;
+}
+ul.ui-menu li:nth-child(odd) {
+    background-color: var(--oddColor);
+}
+li.ui-menu-item{
+    font-size: var(--menuFontSize);
+    margin-top: 5px;
+}
+.ul-wigget-content{
+    border: 1px solid #999;
+}
+.ul-corner-all{
+    border-radius: 0px;
+}
+.ul-wigget-content a{
+    color: #999;
+    font-size: 14px;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 1px 0;
+    margin: 2px var(--mainContentMarginLeft) 5px var(--mainContentMarginLeft);
+    width: 1186px;
+}
+section table{
+    margin: 2px 0 5px var(--mainContentMarginLeft);
+}
+body.close table{
+    width: 1340px;
+}
+table th, td {
+    text-align: left;
+    padding: 6px 5px;
+    text-align: center;
+    width: 100px;
+    font-size: 12px;
+    word-wrap: break-word;
+}
+th{
+    background: linear-gradient(180deg,var(--mainColor),#81a0b0);
+    color: var(--reversalFontColor);
+    font-size: 83%;
+    line-height: 20px;
+}
+tr:nth-child(odd){
+    background-color: var(--reversalFontColor);
+}
+tr:nth-child(even){
+    background-color: var(--oddColor);
+}
+tr.over{
+    background-color: var(--overColor);
+    cursor: pointer;
+}
+tr.over.hoverD,
+tr.hoverD{
+    cursor:default;
+}
+tr.attention{
+    background-color: var(--attentionColor2);
+}
+tr.choosen {
+    background-color: var(--choosenColor);
+}
+.underNavContent{
+    grid-template-rows: 150px auto;
+}
+.underNavContent.close{
+    grid-template-rows: 30px auto;
+}
+.underNavContentD{
+    grid-template-rows: 70px 90px 255px auto;
+}
+.underNavContentH{
+    grid-template-rows: 145px auto;
+}
+img.error{
+    width: 20px;
+    height: 20px;
+}
+body#HistoryPage div.underNavContent,
+body#DetailPage div.underNavContent{
+    grid-template-rows: auto auto;
+}
+body#ClientListPage div.underNavContent{
+    grid-template-rows: 30% 5% 65%;
+}
+body#ClientListPage div.underNavContent.close{
+    grid-template-rows: 10% 5% 85%;
+}
+div.content2{
+    grid-template-columns: auto 510px;
+    place-items: start;
+}
+div.content2 .grid{
+    grid-template-rows: 20% 80%;
+}
+div.content2 .inactive{
+    grid-template-rows: 3.5% 96.5%;
+}
+div#order{
+    text-align: end;
+    margin: auto 3px 5px auto;
+}
+div#order div.searchInputDateBox{
+    text-align: start;
+    padding: 0 10px;
+}
+div#order button:hover{
+    background-color: var(--pointColor);
+}
+#toDetail,
+#toHistory{
+    top: -5px;
+    margin: 0 0 0 auto;
+    right: 0;
+    width: 140px;
+    height: 35px;
+}
+#toAlertMailSetting{
+    top: -5px;
+    margin: 0 0 0 auto;
+    right: 0;
+    width: 140px;
+    height: 35px;
+}
+#toDetail{
+    top: -122px;
+    left: 10px;
+}
+.inactive #toDetail{
+    top: -57px;
+}
+#toBack {
+    width: 140px;
+    height: 35px;
+    top: -101px;
+    left: 1px;
+}
+body#DetailPage table th,
+body#DetailPage table td{
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+body#DetailPage table{
+    height: 150px;
+    margin: 20px 20px 10px auto;
+}
+.ambigousBox input[type="text"]{
+    width: 146px;
+}
+body#DetailPage table#DetailAlertTable td:first-child,
+body#DetailPage table#DetailAlertTable th:first-child{
+    width: 30px
+}
+body#DetailPage table#DetailExchangeTable th{
+    width: 140px;
+}
+#choosedMachineTitle{
+    top: 0;
+    left: 0;
+    background-color: #dce7e8;
+    width: 663px;
+    height: 30px;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 0 8px 0 0;
+    z-index: 2;
+}
+#choosedMachineInfo_HP,
+#choosedMachineInfo{
+    top: -90px;
+    left: 10px;
+    /*right: 0px;*/
+    background-color: var(--reversalFontColor);
+    width: 643px;
+    height: 140px;
+    padding: 32px 10px 0 10px;
+    line-height: 22px;
+    box-shadow: 1px 1px 6px var(--middleMainColor);
+    border-radius: 0 10px 0 0;
+}
+#choosedMachineInfo_HP.inactive,
+#choosedMachineInfo.inactive {
+    height:75px;
+}
+#choosedMachineInfo_HP{
+    top: -14px;
+}
+#choosedMachineContent{
+    grid-template-rows: auto;
+    grid-template-columns: 60% 40%;
+}
+#choosedMachineInfo_HP span:after,
+#choosedMachineInfo span:after{
+    content: "";
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 6px solid var(--mainColor);
+    position: absolute;
+    top: 4px;
+    left: 0px;
+}
+#choosedMachineInfo_HP p.pushRight,
+#choosedMachineInfo p.pushRight{
+    margin-left: 10px;
+}
+.infoLine{
+    border-bottom: 2px solid #dce7e8;
+}
+/*アラート情報*//*お知らせ情報*/
+.searchTitle{
+    background:var(--middleMainColor);
+    border-radius: 0 0 5px 0;
+    width: 150px;
+    height: 35px;
+    line-height: 40px;
+    padding-left: 60px;
+}
+div.titleBox{
+    width: 1213px;
+    height: 10px;
+    background-color: var(--middleMainColor);
+}
+.search{
+    grid-template-columns: 50% 50%;
+}
+.ambigousBox input[type="text"]{
+    width: 146px;
+}
+div#machineList p{
+    position: relative;
+    color: var(--mainFontColor);
+    font-size: 12px;
+}
+body.close div.titleBox,
+body.close .searchBox{
+    width: 1361px;
+}
+.searchBox{
+    width: 1210px;
+    border-radius: 0 5px 0 0;
+    grid-template-rows: 35px 100px;
+    border-radius: 0 5px 0 0;
+    border-bottom: 2px solid var(--middleMainColor);
+}
+div.close div.searchBox{
+    border: none;
+}
+.searchBox ul.front{
+    z-index: 10;
+    background-color: var(--reversalFontColor);
+    top: 0px;
+    left: 115px;
+    width: 150px;
+    padding: 0 5px 5px;
+}
+ul.complementBox li{
+    margin-top: 6px;
+}
+.sortInfo{
+    margin: 6px var(--mainContentMarginLeft) 0;
+    font-size: 16px;
+}
+.searchContent {
+    display: none;
+}
+.searchContent.active{
+    display: grid;
+    grid-template-columns: 47.5% 46.5% 6%;
+    grid-auto-flow: column;
+    background-color: #fff;
+    place-items: start;
+    height: 100px;
+}
+.searchContent.active.oneRow{
+    grid-template-columns: 94.5% 4.5%;
+}
+.searchContent.active.oneRow .innerSearchContent,
+.active .innerSearchContent{
+    grid-template: 33.3% 33.3% 33.3% / 50% 50%;
+    grid-auto-flow: row;
+    place-items: start;
+    height: 100px;
+}
+.searchContent.active.oneRow .innerSearchContent{
+    grid-template-columns: 33.3% 33.3% 33.3%; 
+}
+.searchContent.active .searchEmptyBox,
+.searchContent.active .searchInputDateBox,
+.searchContent.active .searchInputBox,
+.searchContent.active .searchSelectBox{
+    margin: 0 0 0 10px;
+    border-bottom: 1px solid #7e7777;
+    box-sizing: border-box;
+    width: 275px;
+    height: 33px;
+}
+.searchContent.active .searchEmptyBox{
+    border: none;
+}
+div.searchContent.active div.longBorder{
+    width: 300px;
+}
+div.searchContent div#period{
+    width: 275px;
+}
+.searchInputBox input[type="text"],
+.searchInputBox input[type="number"]{
+    width: 160px;
+    height: 30px;
+}
+.ambigousBox select{
+    width: 170px;
+    margin-left: 108px;
+}
+.searchContent button.change{
+    margin: 3px 0px 0 auto;
+    width: 60px;
+    height: 38px;
+    top: 68px;
+    right: 0px;
+}
+div.searchContent label{
+    display: inline-block;
+    width: 99px;
+}
+div.searchContent label.short{                                   
+    width: 70px;
+}
+div.contentBox.BRA div#branchDiv{
+    display: none;
+}
+div.contentBox.CLT div#clientDiv{
+    display: none;
+}
+div.contentBox.ENU div#clientDiv,
+div.contentBox.ENU div#branchDiv,
+div.contentBox.ENU div#endUNDiv{
+    display: none;
+}
+.orderBox select,
+.selector select,
+.searchInputDateBox input[type="date"],
+.searchSelectBox select{
+    width: 160px;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+}
+#order select:first-child{
+    width: 150px;
+}
+.orderBox select:focus,
+.selector select:focus,
+input#searchDateInput:focus,
+.searchInputDateBox input[type="date"]:focus,
+div.searchSelectBox select:focus,
+div.searchInputBox input[type="text"]:focus{
+    outline: 0;
+    border-bottom: 2px solid var(--pointColor);
+    font-weight: 700;
+    box-sizing: border-box;
+}
+p#searchDate{
+    font-size: var( --subTitleFontSize);
+    color: var(--pointColor);
+}
+/*Detail.html用CSS*/
+.picAndButton .sampleImg{
+    margin: 20px;
+    background-color: #ccc;
+    width: 300px;
+    height: 300px;
+    line-height: 300px;
+    text-align: center;
+}
+.picAndButton{
+    padding: 0 20px 0 0;
+}
+.historyButton{
+    background-color: rgb(14,42,180);
+    width: 150px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+.historyButton a{
+    color: #fff;
+}
+.tooltip_small{
+    width: 115px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color:#7e7777 ;
+    color: var(--reversalFontColor);
+    font-size: 12px;
+}
+.tooltip_small:after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 40%;
+    border: 5px solid transparent;
+    border-top: 10px solid #7e7777;
+}
+div.close .tooltip_small{
+    top: 140px;
+}
+.tooltip{
+    position: absolute;
+    top: 245px;
+    left: 10px;
+    background-color: var(--pointColor);
+    border-radius: 5px;
+    color: #fff;
+    width: 230px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+.tooltip::after{
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: 100%;
+    border: 5px solid var(--lightMainColor);
+    border-left: 12px solid var(--pointColor);
+}
+div.close .tooltip{
+    position: absolute;
+    top: 93px;
+    left: 10px;
+}
+div#ClientListTooltip{
+    width: 300px;
+    top: 241px;
+}
+div.close div#ClientListTooltip{
+    top: 93px;
+}
+div.content3 h2{
+    line-height: 15px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-top: 16px;
+}
+table#DetailAlertTable{
+    width: 480px;
+    max-height: 230px;
+}
+div#AlertListPage div.close .tooltip{
+    top: 150px;
+}
+div.selector{
+    text-align: end;
+}
+button.change{
+    margin: 0 10px;
+    width: 100px;
+    height: 35px;
+    background-color: var(--buttonBGColor);
+    border-radius: 5px;
+    border-top: 3px solid var(--buttonHighLight);
+    border-left: 3px solid var(--buttonHighLight);
+    border-bottom: 3px solid var(--buttonShadow);
+    border-right: 3px solid var(--buttonShadow);
+}
+button.change.smallBT2{
+    width: 62px;
+    height: 26px;
+}
+button.change.wide{
+    width: 150px;
+    height: 35px;
+}
+button.switch{
+    width: 80px;
+    height: 25px;
+    background-color: var(--buttonBGColor);
+    border-radius: 2px;
+    border-top: 1px solid var(--buttonHighLight);
+    border-left: 1px solid var(--buttonHighLight);
+    border-bottom: 1px solid var(--buttonShadow);
+    border-right: 1px solid var(--buttonShadow);
+}
+button.smallBT{
+    width: 75px;
+    height: 24px;
+    border-top: 1px solid var(--buttonHighLight);
+    border-left: 1px solid var(--buttonHighLight);
+    border-bottom: 1px solid var(--buttonShadow);
+    border-right: 1px solid var(--buttonShadow);
+}
+.content1{
+    grid-template-rows: 40px 48px;
+    padding-left: 12px;
+    place-items: end;
+}
+.content2 .col2{
+    top: 58px;
+    right: 480px;
+    /*left: 710px;*/
+}
+button.change:hover{
+    border: 3px solid var(--attentionColor3);
+    background-color: var(--reversalFontColor);
+    color: var(--mainFontColor);
+}
+/*検索ボックスの開閉ボタン設定*/
+/*閉じている時*/
+div.menuButton,
+div.menuButton.active{
+    position: relative;
+    top: -35px;
+    left: 7px;
+    box-sizing: border-box;
+    background-color: var(--middleMainColor);
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+}
+.menuButton span,
+.menuButton.active span{
+    display: inline-block;
+    background-color: var(--middleMainColor);
+    transition: all .4s;
+    position: absolute;
+}
+.menuButton span:nth-of-type(1),
+.menuButton span:nth-of-type(3){
+    height: 2px;
+    background: #fff;
+    width: 90%;
+    left: 0px;
+}
+.menuButton span:nth-of-type(1){
+    top: 3px;
+}
+.menuButton span:nth-of-type(2){
+    top: 8px;
+    left: 1px;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+.menuButton span:nth-of-type(3){
+    top: 30px;
+}
+/*開いている時*/
+.menuButton.active span:nth-of-type(1){
+    top: 7px;
+    left: 7px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 40%;
+}
+.menuButton.active span:nth-of-type(2){
+    opacity: 0;
+}
+.menuButton.active span:nth-of-type(3){
+    top: 7px;
+    left: 7px;
+    transform: translateY(6px) rotate(45deg);
+    width: 40%;
+}
+.menuButton.active span:nth-of-type(3)::after{
+    content: "CLOSE";
+    transform: translateY(0) rotate(-45deg);
+    position: absolute;
+    top: 7px;
+    left: 0px;
+    color: #fff;
+    font-size: 0.6rem;
+}
+table#historyTable th,
+table#historyTable td{
+    padding: 4px 8px;
+}
+/*table#clientListTable th,
+table#clientListTable td{
+    width: 300px;
+    height: 20px;
+    line-height: 20px;
+    padding: 7px 15px;
+}*/
+
+/*SessionTimeoutページ*/
+body.timeout h1{
+    line-height: 32;
+}
+span.ambiguous{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    margin-top: 5px;
+}
+span.ambiguous.close::after {
+    position: absolute;
+    content: "";
+    top: 7px;
+    left: 5px;
+    border-top: 5px solid #333;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+}
+span.ambiguous::after {
+    position: absolute;
+    content: "";
+    top: 2px;
+    left: 5px;
+    border-bottom: 5px solid #333;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-top: 5px solid transparent;
+}
+td.level1,
+span.level1 {
+    font-weight: 600;
+    color: var(--pointColor);
+}
+td.level2,
+span.level2{
+    font-weight: 600;
+    color: var(--worningLevelColor);
+}
+td.level3,
+span.level3{
+    font-weight: 600;
+    color: var(--attentionLevelColor);
+}
+.transparent {
+    fill: #ffe1df33;
+}
+.flash{
+    animation: flash 1s linear infinite;
+}
+@keyframes flash{
+    0%,
+    100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+/*ユーザ管理画面*/
+div.editFormGroup{
+    position: relative;
+    left: 50px;
+    top: 20px;
+    height: 60px;
+}
+
+div.submit{
+    position: relative;
+    left: 50px;
+    top: 20px;
+    height: 60px;
+}
+
+div.editFormGroup label{
+    display:inline-block;
+    font-size: 20px;
+    width: 300px;
+}
+
+div.editFormGroup input[type="password"]{
+    width: 200px;
+    display:inline-block;
+    font-size: 20px;
+    border: 1px solid #999;
+    height: 30px;
+}
+
+div.editFormGroup select{
+    width: 60px;
+    font-size: 20px;
+}
+
+div.editFormGroup input[type="submit"]{
+    width: 200px;
+    font-size: 20px;
+    text-align: center;
+}
+
+
