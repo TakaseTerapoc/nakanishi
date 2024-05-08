@@ -46,6 +46,7 @@
                     <label for="passInput"><%=LoginPageWords[(int)LanguageTable.LoginPageStrId.Login_2] %>：</label>
                     <input type="password" id="passInput" name="password"/>
                 </div>
+                <%-- takase0507test--%>
                 <%-- takase0507--%>
                 <%--
                 <div id="langSelect" class="formGroup">
